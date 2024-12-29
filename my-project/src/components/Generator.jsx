@@ -19,7 +19,15 @@ function Header(props) {
   );
 }
 
-function Generator({ muscles, setMuscles, poison, setPoison, goal, setGoal }) {
+function Generator({
+  muscles,
+  setMuscles,
+  poison,
+  setPoison,
+  goal,
+  setGoal,
+  updateWorkout,
+}) {
   const [showModal, setShowModal] = useState(false);
 
   function toggleModal() {
@@ -50,6 +58,7 @@ function Generator({ muscles, setMuscles, poison, setPoison, goal, setGoal }) {
 
   return (
     <SectionWrapper
+      id={"generate"}
       header={"generate your workout"}
       title={["It's", "Huge", "o'clock"]}
     >
@@ -94,7 +103,7 @@ function Generator({ muscles, setMuscles, poison, setPoison, goal, setGoal }) {
               muscles.length === 0 ? "capitalize" : "capitalize text-red-500"
             }`}
           >
-            {muscles.length === 0 ? "Select muscle groups" : muscles.join(" ")}
+            {muscles.length === 0 ? "Select muscle groups" : muscles.join(", ")}
           </p>
           <i className="fa-sharp absolute right-3 top-1/2 -translate-y-1/2 fa-solid fa-caret-down"></i>
         </button>
@@ -147,7 +156,7 @@ function Generator({ muscles, setMuscles, poison, setPoison, goal, setGoal }) {
         })}
       </div>
 
-      <Button text={"Formulate"} />
+      <Button func={updateWorkout} text={"Formulate"} />
     </SectionWrapper>
   );
 }

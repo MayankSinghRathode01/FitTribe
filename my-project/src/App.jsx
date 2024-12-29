@@ -3,12 +3,28 @@ import Generator from "./components/Generator";
 import Hero from "./components/Hero";
 
 import Workout from "./components/Workout";
+import { generateWorkout } from "./utils/functions";
 
 function App() {
   const [workout, setWorkout] = useState(null);
   const [poison, setPoison] = useState("individual");
   const [muscles, setMuscles] = useState([]);
   const [goal, setGoal] = useState("strength_power");
+
+  function updateWorkout() {
+    if (muscles.length < 1) {
+      return;
+    }
+    let newWorkout = generateWorkout({ poison, muscles, goal });
+    setWorkout(newWorkout);
+
+    setTimeout(() => {
+      const element = document.getElementById("workout");
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 50);
+  }
 
   return (
     <main className="min-h-screen flex flex-col bg-gradient-to-r from-slate-950 to-slate-700 text-white text-sm sm:text-base ">
@@ -20,6 +36,7 @@ function App() {
         setMuscles={setMuscles}
         goal={goal}
         setGoal={setGoal}
+        updateWorkout={updateWorkout}
       />
       {workout && <Workout workout={workout} />}
     </main>

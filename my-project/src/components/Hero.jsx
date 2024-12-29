@@ -10,7 +10,7 @@ function Hero() {
         </h1>
       </div>
       <p className="text-base md:text-lg font-medium">
-        I hereby acknowledgement that by becoming a{" "}
+        I hereby acknowledge that by becoming a{" "}
         <span className="text-red-500 font-semibold">FitTriber</span>, I accept
         all the risks of becoming the local{" "}
         <span className="text-red-500 font-semibold">
@@ -21,7 +21,15 @@ function Hero() {
         <span className="text-red-500 font-semibold">best version</span> of
         myself.
       </p>
-      <Button text={"Accept & Begin"} />
+      <Button
+        func={() => {
+          const element = document.getElementById("generate");
+          if (element) {
+            element.scrollIntoView({ behavior: "smooth" });
+          }
+        }}
+        text={"Accept & Begin"}
+      />
     </div>
   );
 }
