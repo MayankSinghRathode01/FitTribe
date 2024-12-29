@@ -145,7 +145,7 @@ function Generator({
               }}
               className={`${
                 scheme === goal ? "bg-red-500 text-slate-950" : "bg-slate-950"
-              } border border-red-500 py-3 hover:bg-red-500 hover:text-slate-950 rounded-lg duration-200 px-4`}
+              } border border-red-500 py-3 hover:bg-red-500 hover:text-slate-950 rounded-lg duration-200 px-3  overflow-auto `}
               key={schemeIndex}
             >
               <p className="capitalize font-medium">
