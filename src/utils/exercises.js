@@ -20,12 +20,12 @@ export const SCHEMES = {
 
 export const WORKOUTS = {
     individual: ['biceps', 'triceps', 'chest', 'back', 'shoulders', 'quads', 'hamstrings', 'glutes', 'calves', 'abs'],
-    bro_split: {
+     bodybuilder_split: {
         push: ['triceps', 'chest', 'shoulders'],
         pull: ['back', 'shoulders', 'biceps'],
         legs: ['glutes', 'calves', 'hamstrings', 'quads']
     },
-    bodybuilder_split: {
+    bro_split: {
         chest: ['chest'],
         back: ['back'],
         shoulders: ['shoulders'],
@@ -70,7 +70,8 @@ export const EXERCISES = {
         unit: 'reps', //vs duration
         muscles: ['chest'],
         description: 'Ensure your scapula are retracted when performing the bench press, arms 2 palm widths wider than shoulder width. Lower the bar with your elbows flared at a 45 degree angle from your torso, touching the bar down to your chest at your nipple line.',
-        substitutes: ['pushups', 'dumbbell bench press', 'floor press']
+        substitutes: ['pushups', 'dumbbell bench press', 'floor press'],
+        gifUrl: 'https://fitnessprogramer.com/wp-content/uploads/2021/02/Barbell-Bench-Press.gif'
         //have general description first and specific one second
     },
     prayer_press: {
@@ -88,7 +89,8 @@ export const EXERCISES = {
         unit: 'reps', //vs duration        
         muscles: ['chest'],
         description: 'Place a light, weighted plate between the palms of your hands (as if your were praying), and while keeping your scapula retracted, press your hands together while pushing the plate away from you.',
-        substitutes: ['palm prayer press']
+        substitutes: ['palm prayer press'],
+        gifUrl:'https://burnfit.io/wp-content/uploads/2023/11/DB_SQUEEZE_PRESS.gif'
     },
     pec_dec: {
         type: 'accessory',
@@ -105,7 +107,8 @@ export const EXERCISES = {
         unit: 'reps', //vs duration        muscles: ['chest'],        
         muscles: ['chest'],
         description: 'Ensure your scapula is retracted and try to puff our your chest while performing this exercise. Make sure you bring the handles together so they touch, and the range of motion should be no more than 90 degrees either side.',
-        substitutes: ['cable chest fly']
+        substitutes: ['cable chest fly'],
+        gifUrl:'https://fitnessprogramer.com/wp-content/uploads/2021/02/Pec-Deck-Fly.gif'
     },
     standing_dumbbell_incline_fly: {
         type: 'accessory',
@@ -117,7 +120,8 @@ export const EXERCISES = {
         unit: 'reps', //vs duration    
         muscles: ['chest', 'shoulders'],
         description: 'Standing with a dumbbell in either hand, palms facing forwards and chest puffed out, raise one dumbbell up and across your body until your palm is facing the ceiling and your hand has crossed your body. Lower slowing and repeat on the other side.',
-        substitutes: ['inclined cable fly']
+        substitutes: ['inclined cable fly'],
+        gifUrl:'https://i.pinimg.com/originals/1b/d3/4f/1bd34f913d89df896ba857018a66b4f8.gif'
     },
     standing_plate_raises: {
         type: 'accessory',
@@ -129,7 +133,8 @@ export const EXERCISES = {
         unit: 'reps', //vs duration    
         muscles: ['chest', 'shoulders'],
         description: 'Standing with a weighted plate gripped eitherside, start with the plate down infront of your hips, and then raise the plate up infront of you to shoulder height, pausing at that height for a moment, before lowering the weight back down. Puff your chest up towards the ceiling while performing this exercise.',
-        substitutes: ['standing dumbbell inline fly']
+        substitutes: ['standing dumbbell inline fly'],
+        gifUrl: 'https://i.pinimg.com/originals/dd/01/d7/dd01d7f4b5a021849ab0a3e1a7f54c49.gif'
     },
     cable_fly: {
         type: 'accessory',
@@ -146,7 +151,8 @@ export const EXERCISES = {
         unit: 'reps', //vs duration    
         muscles: ['chest'],
         description: 'This exercise can be performed from high to low, or low to high. Using the handles and with your arms mostly straight, bring the two handles together in front of you, and then slowly release backwards.',
-        substitutes: ['Inclined dumbbell fly']
+        substitutes: ['Inclined dumbbell fly'],
+        gifUrl:'https://www.inspireusafoundation.org/wp-content/uploads/2023/08/high-cable-fly.gif'
     },
     pushup: {
         type: 'accessory',
@@ -163,7 +169,8 @@ export const EXERCISES = {
         unit: 'reps', //vs duration    
         muscles: ['chest'],
         description: 'In a plank position, with hands slightly further than shoulder width apart (and thumbs around nipple height), slowly lower your chest to the ground, keeping elbows flared to a 45 degree angle. Then press back up.',
-        substitutes: ['pushups', 'dumbbell bench press', 'floor press']
+        substitutes: ['pushups', 'dumbbell bench press', 'floor press'],
+        gifUrl:'https://fitnessprogramer.com/wp-content/uploads/2021/06/Push-Up-Plus.gif'
     },
     dips: {
         type: 'compound',
@@ -175,42 +182,45 @@ export const EXERCISES = {
         unit: 'reps', //vs duration    
         muscles: ['chest', 'triceps'],
         description: 'When in the dip position, ensure you are leaning forward over your hands and slowly lower your body until your elbows are parallel with the ground. Then press back up. Keep your elbow flare to a maximum of 45 degrees.',
-        substitutes: ['Chair dip']
+        substitutes: ['Chair dip'],
+        gifUrl:'https://fitnessprogramer.com/wp-content/uploads/2021/02/Triceps-Dips.gif'
     },
-    // incline_barbell_bench: {
-    //     type: 'compound',
-    //     meta: {
-    //         environment: 'gymhome',
-    //         level: [0, 1, 2],
-    //         equipment: []
-    //     },
-    //     variants: {
-    //         incline: 'Press your hands away from you at a 45 degree angle above horizontal.',
-    //         horizontal: 'Press your hands away from you at a 45 degree angle from horizontal.',
-    //         decline: 'Press your hands away from you at a -30 degree angle below horizontal.'
-    //     },
-    //     unit: 'reps', //vs duration    
-    //     muscles: ['chest'],
-    //     description: 'With a bench inclined between 30 and 45 degrees, hold the bar directly above your chest. With your scapula retracted, lower the bar keeping elbows to a maximum 45 degree flare, until the bar touches your chest. Then press back up.',
-    //     substitutes: ['inclined dumbbell press', 'inclined pushup']
-    // },
-    // incline_dumbbell_bench: {
-    //     type: 'compound',
-    //     meta: {
-    //         environment: 'gymhome',
-    //         level: [0, 1, 2],
-    //         equipment: []
-    //     },
-    //     variants: {
-    //         incline: 'Press your hands away from you at a 45 degree angle above horizontal.',
-    //         horizontal: 'Press your hands away from you at a 45 degree angle from horizontal.',
-    //         decline: 'Press your hands away from you at a -30 degree angle below horizontal.'
-    //     },
-    //     unit: 'reps', //vs duration    
-    //     muscles: ['chest'],
-    //     description: 'With a bench inclined between 30 and 45 degrees, hold the dumbbells directly above your chest. With your scapula retracted, lower the dumbells keeping elbows to a maximum 45 degree flare, until your thumbs touch your nipples. Then press back up.',
-    //     substitutes: ['inclined dumbbell press', 'inclined pushup']
-    // },
+    incline_barbell_bench: {
+        type: 'compound',
+        meta: {
+            environment: 'gymhome',
+            level: [0, 1, 2],
+            equipment: []
+        },
+        variants: {
+            incline: 'Press your hands away from you at a 45 degree angle above horizontal.',
+            horizontal: 'Press your hands away from you at a 45 degree angle from horizontal.',
+            decline: 'Press your hands away from you at a -30 degree angle below horizontal.'
+        },
+        unit: 'reps', //vs duration    
+        muscles: ['chest'],
+        description: 'With a bench inclined between 30 and 45 degrees, hold the bar directly above your chest. With your scapula retracted, lower the bar keeping elbows to a maximum 45 degree flare, until the bar touches your chest. Then press back up.',
+        substitutes: ['inclined dumbbell press', 'inclined pushup'],
+        gifUrl:'https://newlife.com.cy/wp-content/uploads/2019/11/00471301-Barbell-Incline-Bench-Press_Chest_360.gif'
+    },
+    incline_dumbbell_bench: {
+        type: 'compound',
+        meta: {
+            environment: 'gymhome',
+            level: [0, 1, 2],
+            equipment: []
+        },
+        variants: {
+            incline: 'Press your hands away from you at a 45 degree angle above horizontal.',
+            horizontal: 'Press your hands away from you at a 45 degree angle from horizontal.',
+            decline: 'Press your hands away from you at a -30 degree angle below horizontal.'
+        },
+        unit: 'reps', //vs duration    
+        muscles: ['chest'],
+        description: 'With a bench inclined between 30 and 45 degrees, hold the dumbbells directly above your chest. With your scapula retracted, lower the dumbells keeping elbows to a maximum 45 degree flare, until your thumbs touch your nipples. Then press back up.',
+        substitutes: ['inclined dumbbell press', 'inclined pushup'],
+        gifUrl:'https://fitnessprogramer.com/wp-content/uploads/2021/02/Incline-Dumbbell-Press.gif'
+    },
     dumbbell_bench_press: {
         type: 'compound',
         meta: {
@@ -232,7 +242,8 @@ export const EXERCISES = {
         unit: 'reps', //vs duration    
         muscles: ['chest'],
         description: 'With your scapula retracted, hold the dumbbells directly above your chest with your hands slightly wider than shoulder width apart. Lower the dumbbells, keeping elbows to a maximum 45 degree flare, until the your thumbs can touch your nipples/or are at the same height as your nipples, keeping your elbows flared at 45 degrees from your torso. Then press back up.',
-        substitutes: ['pushup', 'bench press']
+        substitutes: ['pushup', 'bench press'],
+        gifUrl:'https://fitnessprogramer.com/wp-content/uploads/2021/02/Dumbbell-Press.gif'
     },
     // decline_pushup: {
     //     type: 'accessory',
@@ -265,7 +276,8 @@ export const EXERCISES = {
         unit: 'reps', //vs duration    
         muscles: ['chest'],
         description: 'Pin the end of a barbell into a ball-joint restraint or corner in the ground. Load any weight on the opposite end of the barbell. Standing behind the loaded end of the barbell, lift the one end so it starts off at chest height.',
-        substitutes: ['prayer press']
+        substitutes: ['prayer press'],
+        gifUrl:'https://i.pinimg.com/originals/78/d9/a6/78d9a6eaab1b5a60984fa93e2473a33c.gif'
     },
     chest_press: {
         type: 'accessory',
@@ -283,7 +295,8 @@ export const EXERCISES = {
         unit: 'reps', //vs duration    
         muscles: ['chest'],
         description: 'Begin with your chest puffed and your scapula down and retracted. Press the handles out until your arms are straight. Then slow release backwards.',
-        substitutes: ['bench press', 'pushup']
+        substitutes: ['bench press', 'pushup'],
+        gifUrl:'https://i.pinimg.com/originals/c3/6f/c8/c36fc890d68c22d739de6cf9b221cc59.gif'
     },
     // smith_machine_incline_press: {
     //     type: 'compound',
@@ -302,7 +315,7 @@ export const EXERCISES = {
     //     description: 'Lying under a smith machine, bench at a 30 to 45 degree angle, ensure that the bar is aligned with your nipple height when it contacts your body. Keep elbows flared to a maximum of 45 degrees from your torso, hands slightly wider than shoulder width.',
     //     substitutes: ['inclined dumbbell press', 'inclined pushup']
     // },
-    smith_machine_press: {
+    smith_machine_incline_press: {
         type: 'compound',
         meta: {
             environment: 'gym',
@@ -318,7 +331,8 @@ export const EXERCISES = {
         unit: 'reps', //vs duration    
         muscles: ['chest'],
         description: 'Lying under a smith machine, ensure that the bar is aligned with your nipple height when it contacts your body. Keep elbows flared to a maximum of 45 degrees from your torso, hands slightly wider than shoulder width.',
-        substitutes: ['bench press', 'pushup', 'dumbbell press']
+        substitutes: ['bench press', 'pushup', 'dumbbell press'],
+        gifUrl:'https://i.pinimg.com/originals/a9/77/9c/a9779c83c9eaf4d81d0546b25fdfa83e.gif'
     },
     // unilateral_chest_press: {
     //     type: 'accessory',
@@ -352,7 +366,8 @@ export const EXERCISES = {
         unit: 'reps', //vs duration    
         muscles: ['chest'],
         description: 'Align your body at a 30 to 45 degree plane to the cable. Press the cable handle across your body until your elbow is straight and slowly release backwards. Ensure elbows are tucked during the exercise.',
-        substitutes: ['unilateral chest press']
+        substitutes: ['unilateral chest press'],
+        gifUrl:'https://fitnessprogramer.com/wp-content/uploads/2021/12/One-Arm-Cable-Chest-Press.gif'
     },
     cable_crossover_press: {
         type: 'accessory',
@@ -369,7 +384,8 @@ export const EXERCISES = {
         unit: 'reps', //vs duration    
         muscles: ['chest'],
         description: 'As if you were doing a pushup or bench press, press the handles together and then crossed over in front of you, alternating the crossover of your hands with each rep.',
-        substitutes: ['cable fly', 'unilateral chest press']
+        substitutes: ['cable fly', 'unilateral chest press'],
+        gifUrl:'https://i.pinimg.com/originals/74/7c/d4/747cd4732733b85c42a6338f308ca29e.gif'
     },
     scapula_pushup: {
         type: 'accessory',
@@ -381,7 +397,8 @@ export const EXERCISES = {
         unit: 'reps', //vs duration    
         muscles: ['chest'],
         description: 'While in a plank or kneeling plank position, with your hands aligned at approximately eye height on the ground, press yourself away from the ground. Then allow your body to come back down to the ground, keeping your elbows straight and the inside of your elbow facing forward at all times.',
-        substitutes: ['pushup']
+        substitutes: ['pushup'],
+        gifUrl:'https://gymvisual.com/img/p/1/2/4/5/1/12451.gif'
     },
     dumbbell_chest_fly: {
         type: 'accessory',
@@ -398,7 +415,8 @@ export const EXERCISES = {
         unit: 'reps', //vs duration    
         muscles: ['chest'],
         description: 'Holding a dumbbell in each hand directly above your chest, slowly lower the dumbbells to either side of your body while keeping your arms mostly straight, palms to the ceiling. Ensure the weights do not drop lowering than the height of your body.',
-        substitutes: ['cable fly']
+        substitutes: ['cable fly'],
+        gifUrl:'https://fitnessprogramer.com/wp-content/uploads/2021/02/Incline-dumbbell-Fly.gif'
     },
     dumbbell_floor_press: {
         type: 'compound',
@@ -410,7 +428,8 @@ export const EXERCISES = {
         unit: 'reps', //vs duration    
         muscles: ['chest'],
         description: 'Lying on your back with your scapula retracted, and the dumbbells starting over your chest, lower each side back down with elbows flared to a 45 degree angle until your elbows touch the ground. Then press back up.',
-        substitutes: ['dumbbell bench press']
+        substitutes: ['dumbbell bench press'],
+        gifUrl:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXLh_90VKyvZ2_FYomFyA82XLESRnpBIRU97Jfc4BYZRRxh5gnP9yi22sSl1P4k_GoBBU&usqp=CAU'
     },
     barbell_floor_press: {
         type: 'compound',
@@ -422,7 +441,8 @@ export const EXERCISES = {
         unit: 'reps', //vs duration    
         muscles: ['chest'],
         description: 'Lying with your scapula retracted, and the barbell starting over your chest, lower the barbell down towards nipple level, elbows flared to a 45 degree angle until your elbows touch the ground. Then press back up.',
-        substitutes: ['barbell bench press']
+        substitutes: ['barbell bench press'],
+        gifUrl:'https://fitnessprogramer.com/wp-content/uploads/2022/07/Barbell-Floor-Press.gif'
     },
     dumbbell_pullover: {
         type: 'accessory',
@@ -434,7 +454,8 @@ export const EXERCISES = {
         unit: 'reps', //vs duration    
         muscles: ['chest', 'back'],
         description: 'Lying holding a single dumbbell as if it were a goblet directly above your chest, slowly track the dumbbell back over your head, keeping your elbows tucked. Track back as far as comfortable behind your head, and then return to the starting position.',
-        substitutes: ['Inclined dumbbell fly']
+        substitutes: ['Inclined dumbbell fly'],
+        gifUrl:'https://fitnessprogramer.com/wp-content/uploads/2021/02/Dumbbell-Pullover.gif'
     },
     pullup: {
         type: 'compound',
